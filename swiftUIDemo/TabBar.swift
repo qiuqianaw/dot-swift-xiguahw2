@@ -15,27 +15,19 @@ struct TabBar: View {
         ZStack (alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             
             TabView(selection: $current) {
-                
                 HomeView()
                     .tag("首页")
-                
                 QRCodeView()
                     .tag("门禁码")
-                
                 AccountView()
                     .tag("我的")
             }
         
             HStack(spacing: 0) {
-                
                 TabButton(title: "首页", image: "house", selected: $current)
-                
                 Spacer()
-                
                 TabButton(title: "门禁码", image: "qrcode", selected: $current)
-                
                 Spacer()
-                
                 TabButton(title: "我的", image: "person", selected: $current)
             }
             .padding(.vertical, 12)
